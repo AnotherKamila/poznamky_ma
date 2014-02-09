@@ -46,21 +46,20 @@ body {
 }
 
 h1 {
-  border-bottom: 2px solid #666;
+  border-bottom: 2px solid #999;
 }
 
 em { color: #666; }
-.MathJax_Display { margin: 0.6em 0;}
+div.MathJax_Display { margin: 0.6em 0; }
 
 dl { margin: 1em 0; }
-dd {
+dl dt { color: #08e; }
+dl dd {
   margin: 0.2em 0 0.2em 1px;
   padding-left: 0.5em;
-  border-left: 2px solid #999;
+  border-left: 2px solid #08e;
 }
 
-dl.vt dd { border-color: #08e; }
-dl.vt dt { color: #08e; }
 /*dl.vt dd { border-color: #d32; }
 dl.vt dt { color: #d32; }*/
 dl.def dd { border-color: #380; }
@@ -71,6 +70,9 @@ dl.def dt { color: #380; }
   color: #666;
   padding: 0 0.2em;
 }
+.D.inline{
+  margin-left: 1em;
+}
 
 </style>
 
@@ -78,8 +80,7 @@ dl.def dt { color: #380; }
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      skipTags: ["script","style","textarea"]
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
     }
   });
 </script>
@@ -87,6 +88,6 @@ dl.def dt { color: #380; }
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    document.body.innerHTML = document.body.innerHTML.replace(/!D/g, '<span class="D">D</span>')
+    document.body.innerHTML = document.body.innerHTML.replace(/-!D/g, '<span class="D inline">D</span>').replace(/!D/g, '<span class="D">D</span>')
   })
 </script>
