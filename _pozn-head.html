@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Kamiline poznámky z matalýzy</title>
+<meta name="generator" content="maruku" />
+
+<style>
+
+body {
+  font-family: serif;
+  margin: 3em 4em 3em 20em;
+  color: #222;
+}
+.maruku_toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16em;
+  height: 100%;
+  overflow: auto;
+}
+.maruku_toc ul {
+  list-style: none;
+  padding: 0 0 0 1em;
+}
+.maruku_toc ul li {
+  font-weight: bold;
+  border-top: 1px solid #999;
+  padding: 0.2em 0;
+}
+.maruku_toc ul li:first-child {
+  border: none;
+}
+.maruku_toc ul li ul li {
+  font-weight: normal;
+  border: none;
+  padding: 0;
+}
+.maruku_toc ul li a {
+  text-decoration: none;
+  color: #666;
+}
+.maruku_toc ul li a:hover,
+.maruku_toc ul li a:focus {
+  /*color: #08e;*/
+  color: #222;
+}
+
+h1 {
+  border-bottom: 2px solid #666;
+}
+
+em { color: #666; }
+.MathJax_Display { margin: 0.6em 0;}
+
+dl { margin: 1em 0; }
+dd {
+  margin: 0.2em 0 0.2em 1px;
+  padding-left: 0.5em;
+  border-left: 2px solid #999;
+}
+
+dl.vt dd { border-color: #08e; }
+dl.vt dt { color: #08e; }
+/*dl.vt dd { border-color: #d32; }
+dl.vt dt { color: #d32; }*/
+dl.def dd { border-color: #380; }
+dl.def dt { color: #380; }
+
+.D {
+  border: 1px solid #666;
+  color: #666;
+  padding: 0 0.2em;
+}
+
+</style>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      skipTags: ["script","style","textarea"]
+    }
+  });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.innerHTML = document.body.innerHTML.replace(/!D/g, '<span class="D">D</span>')
+  })
+</script>
