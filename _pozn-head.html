@@ -11,10 +11,33 @@ body {
   color: #222;
   line-height: 1.2;
 }
+
+h1 {
+  border-bottom: 2px solid #999;
+}
+
+em { color: #666; }
+div.MathJax_Display { margin: 0.6em 0; }
+
+p { margin: 0; }
+
+dl dt {
+  margin: .6em 0 0;
+  color: #08e;
+}
+dl dd {
+  margin: 0.2em 0 0.2em 1px;
+  padding-left: 0.5em;
+  border-left: 2px solid #08e;
+}
+ul, ol {
+  margin: 0;
+}
+
 .maruku_toc {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 1em;
+  left: .4em;
   width: 16em;
   height: 100%;
   overflow: auto;
@@ -42,27 +65,9 @@ body {
 }
 .maruku_toc ul li a:hover,
 .maruku_toc ul li a:focus {
-  /*color: #08e;*/
   color: #222;
 }
 
-h1 {
-  border-bottom: 2px solid #999;
-}
-
-em { color: #666; }
-div.MathJax_Display { margin: 0.6em 0; }
-
-dl { margin: 1em 0; }
-dl dt { color: #08e; }
-dl dd {
-  margin: 0.2em 0 0.2em 1px;
-  padding-left: 0.5em;
-  border-left: 2px solid #08e;
-}
-
-/*dl.vt dd { border-color: #d32; }
-dl.vt dt { color: #d32; }*/
 dl.def dd { border-color: #380; }
 dl.def dt { color: #380; }
 
@@ -73,6 +78,25 @@ dl.def dt { color: #380; }
 }
 .D.inline{
   margin-left: 1em;
+}
+
+
+hr {
+    padding: 0;
+    margin: 4em auto 2em;
+    width: 60%;
+    border: none;
+    border-top: medium double #333;
+    text-align: center;
+}
+hr:after {
+    content: "❄";
+    display: inline-block;
+    position: relative; 
+    top: -0.638em;  
+    font-size: 1.5em;
+    padding: 0 0.5em;
+    background: white;
 }
 
 </style>
