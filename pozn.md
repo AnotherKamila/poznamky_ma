@@ -213,7 +213,7 @@ delenie intervalu
 : $\TODO$
 {:.def}
 
-dolný (resp. horný) Riemannov integrál
+dolný (resp. horný) integrálny súčet
 : $\TODO$
 {:.def}
 
