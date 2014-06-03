@@ -5,7 +5,7 @@
 Limita funkcie
 ==============
 
-Len stručne, lebo lepšie ako Kubáček to aj tak nenapíšem (skriptá sú [tu](http://www.iam.fmph.uniba.sk/skripta/kubacek_inf/)).
+Len stručne, lebo lepšie ako Kubáček to aj tak nenapíšem (skriptá sú [tu (MA I)](http://www.iam.fmph.uniba.sk/skripta/kubacek_inf/) a [tu (MA II)](http://www.iam.fmph.uniba.sk/skripta/kubacek/), resp. for your convenience [MA II: pozliepaná verzia v jednom PDFku](skripta.pdf)).
 
 Definícia limity
 ----------------
@@ -18,7 +18,7 @@ limita fcie
 
 vety o limitách
 : Fcia má v každom hrom. bode $D(f)$ najviac jednu limitu. -!D: sporom
-: lemy:  
+: lemy:
   nech $g$ je zúženie $f$ a existuje $\lim_{x\to a} g(x)$, alebo nech sa zhodujú na niektorom $P(a)$. Potom $\lim_{x\to a} f(x) = \lim_{x\to a} g(x)$.  
   ak $lim_{x\to a} f|_{M_1}(x) \neq lim_{x\to a} f|_{M_2}(x)$, tak $lim_{x\to a} f(x)$ neexistuje.  
   ak $lim_{x\to a} f|_{M_1}(x) = lim_{x\to a} f|_{M_2}(x)$ a navyše $M_1 \cup M_2 = D(f)$, tak $lim_{x\to a} f(x)$ existuje a je rovná tamtomu.  
@@ -87,14 +87,14 @@ Cauchyho veta o strednej hodnote
 : Nech $f, g\c \langle a,b \rangle \to \R$ sú spojité fcie, dif. na $(a,b)$ nech
     1. $f'^2(x) + g'^2(x) > 0, x \in (a,b)$ *(mucha - nesmie zastať)*
     2. $g(a) \neq g(b)$
-  
+
     Potom $\exists c \in (a, b)$ také, že $\frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(c)}{g'(c)}$
-  
+
     Geometrická interpretácia: krivka ($x = f(t)$, $y = g(t)$), podmienky ⇒ hladká; je to to isté, ako Lagrange, len pre krivku
-  
-    !D  
+
+    !D
     Dokážeme: $$ f'(c)(g(b) - g(a)) - g'(c)(f(b) - f(a)) = 0$$
-    Nech $F(x) = f(x)(g(b) - g(a)) - g(x)(f(b) - f(a)) = 0$. Potom hento čudo je $F'$, $F$ spĺňa predpoklady Rolleho vety ($\TODO$), preto $\exists c \in (a, b)\c F'(c) = c$    
+    Nech $F(x) = f(x)(g(b) - g(a)) - g(x)(f(b) - f(a)) = 0$. Potom hento čudo je $F'$, $F$ spĺňa predpoklady Rolleho vety ($\TODO$), preto $\exists c \in (a, b)\c F'(c) = c$  
     Ešte overiť, či tú rovnosť môžem predeliť: $g(b) - g(a) \neq 0$ mám ošetrené predpokladom 1; $g'(c) \neq 0$: sporom: $g'(c) = 0 \Rightarrow g'(c)(f(b) - f(a)) = 0     \Rightarrow f'(c)(g(b) - g(a))$ ⇒ spor s 1.
 
 
@@ -104,7 +104,7 @@ Cauchyho veta o strednej hodnote
 L'Hospitalovo pravidlo
 ----------------------
 
-Prvé L'H pravidlo (0/0)
+Prvé L'H pravidlo ($0/0$)
 : Nech $a \in \Rx$ je hrom. bod intervalu $I$, nech $f,g\c I \setminus {a} \to \R$, nech sú diferencovateľné, ak
     1. $\lim_{x\to a} f(x) = \lim_{x\to a} g(x) = 0$
     2. $f'^2(x) + g'^2(x) > 0, x \in I \setminus {a}$
@@ -112,16 +112,16 @@ Prvé L'H pravidlo (0/0)
     4. existuje vlastná alebo nevl. $\lim_{x\to a} \frac{f'(x)}{g'(x)} = L \in \Rx$
     Potom
     $$ \lim_{x\to a} \frac{f(x)}{g(x)} = \lim_{x\to a} \frac{f'(x)}{g'(x)} $$
-    
+
     Reálne overiteľné je miesto 1. a 2. použiť $g'(x) \neq 0$ (!D => 3: Rolle)
-    
+
     !D
-    Ak $a \in \R$: dodefinujeme $f(a) = g(a) = 0$, dostaneme spojité, dif. na $I\setminus {a}$. Potom $\frac{f(x)}{g(x)} = \frac{f(x) - f(a)}{g(x) - g(a)} = |CVSH| = \frac{f'(    c)}{g'(c)} $ (a $c$ je aspoň tak blízko k $a$ ako $x$)    
-    4 => Pre $\O(L)$: $\exists \P(a)\c \forall c \in P(a)\cap D\left(\frac{f'}{g'}\right)\c \frac{f'(c)}{g'(c)} \in \O(L)$. $x\in\P(a) \Rightarrow c\in\P(a)$    
-    
+    Ak $a \in \R$: dodefinujeme $f(a) = g(a) = 0$, dostaneme spojité, dif. na $I\setminus {a}$. Potom $\frac{f(x)}{g(x)} = \frac{f(x) - f(a)}{g(x) - g(a)} = |CVSH| = \frac{f'(    c)}{g'(c)} $ (a $c$ je aspoň tak blízko k $a$ ako $x$)  
+    4 => Pre $\O(L)$: $\exists \P(a)\c \forall c \in P(a)\cap D\left(\frac{f'}{g'}\right)\c \frac{f'(c)}{g'(c)} \in \O(L)$. $x\in\P(a) \Rightarrow c\in\P(a)$
+
     Ak $a = +\infty$: subst $x = 1/t$, overím hentie podmienky, použijem L'H
 
-Druhé L'H pravidlo (\*/$\infty$)
+Druhé L'H pravidlo ($\infty/\infty$)
 : Nech $a \in \Rx$ je hrom. bod intervalu $I$, nech f,g\c I \setminus {a} \to \R$ sú diferencovateľné fcie, pričom
     1. $\lim_{x\to a} |g(x)| = \infty$
     2. $f'^2(x) + g'^2(x) > 0, x \in I \setminus {a}$
@@ -137,7 +137,68 @@ Taylorove polynómy
 ------------------
 
 archeologická
-: Nech $P$ je polynóm stupňa najviac $n$. Potom $P(x) = P(0) + P'(0) x + \frac{P''(0)}{2!}x^2 + \ldots + \frac{P^{(n)}(0)}{n!}x^n$  
-    !D  
+: Nech $P$ je polynóm stupňa najviac $n$. Potom $P(x) = P(0) + P'(0) x + \frac{P''(0)}{2!}x^2 + \ldots + \frac{P^{(n)}(0)}{n!}x^n$
+    !D
     $\TODO$
-    
+
+
+Neurčitý integrál
+=================
+
+Definícia
+---------
+
+primitívna fcia
+: k $f$ je diferencovateľná fcia $F\c G \to \R$, pre ktorú platí: $\forall x \in G\c F'(x) = f(x)$  
+  (prípadné krajné body ogabeme)
+{:.def}
+
+neurčitý integrál k fcii $f$
+: množina $\forall$ primitívnych fcií k $f$; ozn. $\int f(x) \dx$  
+  platí: nech $F\c I \to \R$ je primitívna k $f\c I \to \R$, potom $G\c I \to \R$ je primitívna k $f$ práve vtedy, keď $\exists C \in \R\c G(x) = F(x) + C$; a potom veselosti so zjednotením intervalov (!D: $\TODO$)
+{:.def}
+
+spojitá fcia má primitívnu
+: Nech $f$ je spojitá fcia definovaná na intervale. Potom k nej existuje primitívna fcia. !D: $\TODO$
+
+Metódy integrovania
+-------------------
+
+integrovanie rozkladom
+: Nech $f_1, \ldots, f_n$ sú def na intervale $I$; nech $F_i$ je primitívna fcia k $f_i$, nech $c_1, \ldots, c_n \in \R$. Potom fcia $c_1 F_1 + \ldots + c_n F_n$ je primitívna k fcii $c_1 f_1 + \ldots + c_n f_n$.  
+  !D: $\TODO$
+
+metóda substitúcie
+: Nech $I$, $J$ sú intervaly, nech $F$ je prim. k $f\c I \to \R$; nech $\phi\c J \to \R$ je diferencovateľná a $\phi(J) \subset I$. Potom fcia $F(\phi(x))$ je prim. k fcii $f(\phi(x))\phi'(x)$. Teda
+    $$ \int f(t) dt = F(t) + C \implies \int f(\phi(x))\phi'(x) \dx = F(\phi(x)) + C $$
+
+    Teda ak hľadáme $\int g(x) \dx$, a podarí sa nám $g(x)$ zapísať v tvare $f(\phi(x))\phi'(x)$, pričom $\int f(x) \dx$ poznáme, tak vieme nájsť aj $\int g(x) \dx$.
+
+: Navyše ak $\phi$ je prostá, tak vieme použiť aj $\phi^{-1}$: ak hľadáme $\int f(x) \dx$, a vieme, že $\int f(\phi(t))\phi'(t) \d t = F(t) + C$, tak $\int f(x) \dx = F(\phi^{-1}(x)) + C$.
+
+Substitúcia je radosť, lebo môžme substituovať fakt všeličo. Za spomenutie stoja napr. goniometrické substitúcie ($x = a \sin t$, $x = a \cos t$, $x = a \tan t$, $x = \frac{a}{\cos t}$, ...).
+
+metóda per partes
+: Nech fcie $u, v\c I \to \R$ sú diferencovateľné na intervale $I$ a nech existuje primitívna fcia k fcii $uv'$. Potom existuje aj primitívna fcia k fcii $u'v$ a platí
+  $$ \int u'(x) v(x) \dx = u(x)v(x) - \int u(x) v'(x) \dx $$
+
+Poznámka: Diferenciálny zápis je super. Keď sa tie veci prepíšu na diferenciály zápis, zrazu to začne vyzerať zmysluplne.
+
+Ešte sa vyskytli rekurentné vzťahy (mlátime per partes až kým nedostaneme niečo, z čoho vyjadríme $I_n$ v závislosti od $I_m$, $n \neq m$) a metóda neurčitých koeficientov (ak vieme tvar, tak si čosi tipneme a derivovaním doladíme konštanty).
+
+Integrovanie racionálnych fcií
+------------------------------
+
+$\TODO$
+
+Integrovanie niektorých goniometrických fcií
+--------------------------------------------
+
+$\int \sin^n x \cos^m x \dx$
+: $\TODO$
+
+univerzálna substitúcia
+: pointa: integrovanie (racionálnej) fcie $R(\sin x, \cos x)$ možno previesť na integrovanie racionálnej fcie premennej $t$ substitúciou $\tan \frac{x}{2}$, $\sin x$ a $\cos x$ majú potom príjemné vyjadrenie (len sa k nemu nepríjemne dostáva). Treba ale doriešovať nespojitosť.
+: $\TODO$ poriadne
+
+Občas sa dá substituovať aj napríklad $\tan x = t$, $ \sin x = t$ alebo $\cos x = t$.
