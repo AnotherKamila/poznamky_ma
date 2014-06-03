@@ -1,11 +1,10 @@
 * Obsah!
 {:toc}
 
+Len stručne, lebo lepšie ako Kubáček to aj tak nenapíšem (skriptá sú [tu (MA I)](http://www.iam.fmph.uniba.sk/skripta/kubacek_inf/) a [tu (MA II)](http://www.iam.fmph.uniba.sk/skripta/kubacek/), resp. for your convenience [MA II: pozliepaná verzia v jednom PDFku](skripta.pdf)).
 
 Limita funkcie
 ==============
-
-Len stručne, lebo lepšie ako Kubáček to aj tak nenapíšem (skriptá sú [tu (MA I)](http://www.iam.fmph.uniba.sk/skripta/kubacek_inf/) a [tu (MA II)](http://www.iam.fmph.uniba.sk/skripta/kubacek/), resp. for your convenience [MA II: pozliepaná verzia v jednom PDFku](skripta.pdf)).
 
 Definícia limity
 ----------------
@@ -198,7 +197,52 @@ $\int \sin^n x \cos^m x \dx$
 : $\TODO$
 
 univerzálna substitúcia
-: pointa: integrovanie (racionálnej) fcie $R(\sin x, \cos x)$ možno previesť na integrovanie racionálnej fcie premennej $t$ substitúciou $\tan \frac{x}{2}$, $\sin x$ a $\cos x$ majú potom príjemné vyjadrenie (len sa k nemu nepríjemne dostáva). Treba ale doriešovať nespojitosť.
+: pointa: integrovanie (racionálnej) fcie $R(\sin x, \cos x)$ možno previesť na integrovanie racionálnej fcie premennej $t$ substitúciou $\tan \frac{x}{2} = t$, $\sin x$ a $\cos x$ majú potom príjemné vyjadrenie (len sa k nemu nepríjemne dostáva). Treba ale doriešovať nespojitosť.
 : $\TODO$ poriadne
 
 Občas sa dá substituovať aj napríklad $\tan x = t$, $ \sin x = t$ alebo $\cos x = t$.
+
+
+Riemannov určitý integrál
+=========================
+
+Definícia a základné vlastnosti
+-------------------------------
+
+delenie intervalu
+: $\TODO$
+{:.def}
+
+dolný (resp. horný) Riemannov integrál
+: $\TODO$
+{:.def}
+
+určitý (Riemannov) integrál
+: $f$ je Riemannovsky integrovateľná na intervale $\langle a, b \rangle$ vtedy, keď
+    $$ \underline{\int_a^b} f(x) \dx = \overline{\int_a^b} f(x) \dx \overset{ozn.}{=:} \int_a^b f(x) \dx $$
+    a $\int_a^b f(x) \dx$ sa nazýva určitý (Riemannov) integrál fcie $f$
+
+    (ozn. $f \in \Riem{a,b}$)
+{:.def}
+
+Tu majú byť nejaké vlastnosti (veta 4, 5, 6 zo skrípt): $\TODO$
+
+ďalšie vlastnosti
+: *(aditívna vlastnosť)* Nech $f\c \langle a, b \rangle \to \R$ je ohraničená fcia, nech $a < c < b$. Potom $f \in \Riem{a,b}$ práve vtedy, keď $f \in \Riem{a,c}$ a súčasne $f \in \Riem{c,b}$. Naviac $\int_a^b f(x) \dx = \int_a^c f(x) \dx + \int_c^b f(x) \dx$.
+: ekvivalent integrovania rozkladom pre určité
+: $f \in \Riem{a,b} \land g \in \Riem{a,b} \implies f \circ g \in \Riem{a,b}$  
+    dôsledky: 
+      - $fg \in \Riem{a,b}$
+      - $|f| \in \Riem{a,b}$
+      - ak naviac $\inf_{x \in \langle a, b \rangle} g(x) > 0$ alebo $\sup_{x \in \langle a, b \rangle} g(x) < 0$, tak aj $f/g \in \Riem{a,b}$
+: Nech $f, g \in \Riem{a,b}$ a $\forall x \in \langle a, b \rangle \c f(x) \leq g(x)$. Potom $\int_a^b f(x) \dx \leq \int_a^b g(x) \dx$
+    - špeciálne: konštanta, absolútna hodnota
+
+Výpočet určitého integrálu pomocou neurčitého
+---------------------------------------------
+
+Newtonov-Leibnizov vzorec
+: Nech $f \in \Riem{a,b}$ a má na $(a, b)$ primitívnu fciu $F$, pričom $\exists$ vlastné limity $\lim_{x \to a+} F(x)$ a $\lim_{x \to b-} F(x)$. Potom
+  $$ \int_a^b f(x) \dx = \lim_{x \to b-} F(x) - \lim_{x \to a+} F(x) \overset{ozn.}{=:} \[F(x)\]_a^b$$
+
+Tu majú byť verzie substitúcie a per partes pre určité integrály.
