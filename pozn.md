@@ -260,3 +260,105 @@ Newtonov-Leibnizov vzorec
   $$ \int_a^b f(x) \dx = \lim_{x \to b-} F(x) - \lim_{x \to a+} F(x) \overset{ozn.}{=:} \[F(x)\]_a^b$$
 
 Tu majú byť verzie substitúcie a per partes pre určité integrály.
+
+
+Číselné rady
+============
+
+Základné pojmy
+--------------
+
+(nekonečný číselný) rad
+: symbol $\sum_{n=k}^\infty a_n$, kde $\{a_n\}_{n=k}^\infty$ ($k \in \N_0$) je postupnosť
+: blabla, indexy si môžme začať kde chceme (tak napríklad na $k = 1$)
+: $S_k = \sum_{n=1}^k a_n$ sa nazýva $k$-ty čiastočný súčet radu $\sum_{n=k}^\infty a_n$;  
+    ak $\exists$ konečná limita $\lim_{n\to\infty} S_n :=$ súčet radu, tak rad **konverguje**, inak **diverguje** a rozlišujeme:
+    1. $\lim_{n\to\infty} S_n = +\infty$: rad diverguje k $+\infty$
+    2. $\lim_{n\to\infty} S_n = -\infty$: rad diverguje k $-\infty$
+    3. $\lim_{n\to\infty} S_n $ neexistuje: rad osciluje
+  ak rady robia to isté, **majú rovnaký charakter**
+{:.def}
+
+ďalšie pojmy, čo sa mi už fakt nechce písať: $k$-ty zvyšok radu, súčet radov, $k$-násobok radu
+
+geometrický rad
+: $\sum_{n=0}^\infty aq^n$, $a, q \in \R$ sú pevne dané  
+  ($q$: kvocient)  
+  konverguje ak $a = 0$ alebo $|q| < 1$, diverguje ak $q > 1$, osciluje ak $q < -1$  
+  súčet ak $|q| < 1$:
+  $$ \sum_{n=0}^\infty aq^n = \frac{a}{1-q} $$
+{:.def}
+
+o urvávaní začiatku
+: Nech je daná postupnosť ${a_n}_{n=1}^\infty$. Potom rady $\sum_{n=1}^\infty a_n$ a $\sum_{n=k}^\infty a_n$ majú rovnaký charakter.
+
+Cauchy-Bolzanovo kritérium konvergencie
+: Rad $\sum_{n=1}^\infty a_n$ konverguje práve vtedy, keď
+  $$ \forall \eps > 0\c \exists n_0 \in \N\c \forall n \in \N, n > n_0\c \forall p \in \N\c |a_{n+1} + \ldots + a_{n+p} | < \eps $$
+
+nutná podmienka konvergencie (NP)
+: Ak rad $\sum_{n=1}^\infty a_n$ konverguje, tak $\lim_{n\to\infty} a_n = 0$
+
+Rady s nezápornými (nekladnými) členmi
+--------------------------------------
+
+čo to je je snáď jasné, nechce sa mi
+
+porovnávacie kritérium
+: Nech $\sum_{n=1}^\infty a_n$, $\sum_{n=1}^\infty b_n$ sú rady s nezápornými členmi, nech počínajúc niektorým $n_0$ platí $a_n \leq b_n$. Potom z konvergencie radu $\sum_{n=1}^\infty b_n$ vyplýva konvergencia $\sum_{n=1}^\infty a_n$; z divergencie $\sum_{n=1}^\infty a_n$ vyplýva konvergencia $\sum_{n=1}^\infty b_n$
+  
+    Špeciálne ak $\sum_{n=1}^\infty b_n$ je rad s kladnými členmi a $\exists$ (vlastná alebo nevlastná) $\lim_{n\to\infty} \frac{a_n}{b_n} =: K$. Potom
+     - ak $K \in (0, \infty)$, tak $\sum_{n=1}^\infty a_n$ a $\sum_{n=1}^\infty b_n$ majú rovnaký charakter
+     - ak $K = 0$ a $\sum_{n=1}^\infty b_n$ konverguje, tak aj $\sum_{n=1}^\infty a_n$ konverguje
+     - ak $K = \infty$ a $\sum_{n=1}^\infty b_n$ diverguje, tak aj $\sum_{n=1}^\infty a_n$ diverguje
+
+Riemannove rady
+: Rad $\sum_{n=1}^\infty \frac{1}{n^p}$ konverguje pre $p > 1$ a diverguje pre $p \leq 1$.  
+  (Volá sa to Riemannove rady a konkrétne pre $p = 1$ harmonický)
+
+d'Alembertovo kritérium
+: Nech $\sum_{n=1}^\infty a_n$ je rad s kladnými členmi. Potom
+
+    1. ak $\limsup_{n\to\infty} \frac{a_{n+1}}{a_n} < 1$, tak konverguje
+    2. ak počínajúc nejakým $n_0$ platí $\frac{a_{n+1}}{a_n} > 1$, tak diverguje
+
+    *(limitný tvar d'A)* Špeciálne, nech $\exists$ (vlastná alebo nevlastná) $\lim_{n\to\infty} \frac{a_{n+1}}{a_n} =: K$. Ak $K < 1$, tak konverguje, ak $K > 1$ tak diverguje (ak 1 tak netušíme). 
+
+Cauchyho kritérium
+: Nech $\sum_{n=1}^\infty a_n$ je rad s nezápornými členmi. Potom
+
+    1. ak $\limsup_{n\to\infty} \sqrt\[n\]{a_n} < 1$, tak konverguje
+    2. ak pre nekonečne veľa $n \in \N$ platí $\sqrt\[n\]{a_n} \geq 1$, tak diverguje
+
+    *(limitný tvar Cauchyho)* Špeciálne, nech $\exists$ (vlastná alebo nevlastná) $\lim_{n\to\infty} \sqrt\[n\]{a_n} =: K$. Ak $K < 1$, tak konverguje, ak $K > 1$ tak diverguje (ak 1 tak netušíme)
+
+Raabeho kritérium
+: Nech $\sum_{n=1}^\infty a_n$ je rad s kladnými členmi. Potom
+  
+    1. ak $\liminf_{n\to\infty} n \left(\frac{a_n}{a_{n+1}} - 1\right) > 1$, tak konverguje
+    2. ak počínajúc nejakým $n_0$ platí $n \left(\frac{a_n}{a_{n+1}} - 1\right) \leq 1$, tak diverguje
+
+    *(limitný tvar Raabeho)* Špeciálne, nech $\exists$ (vlastná alebo nevlastná) $\lim_{n\to\infty} n \left(\frac{a_n}{a_{n+1}} - 1\right) =: K$. Ak $K > 1$, tak konverguje, ak $K < 1$ tak diverguje (ak 1 tak netušíme)
+
+integrálne kritérium
+: Nech $f\c \langle 1, \infty) \to \R$ je nezáporná nerastúca fcia. Potom rad $\sum_{n=1}^\infty f(n)$ konverguje (resp. diverguje) práve vtedy, keď $\lim_{x\to\infty} \int_1^x f(t) \d t$ je vlastná (resp. nevlastná).
+
+    Špeciálne, ak $f$ je naviac spojitá, tak rad konverguje (diverguje), ak $\lim_{x\to\infty} F(x)$, kde $F$ je primitívna fcia k $f$, je vlastná (nevlastná).
+
+Absolútne a relatívne konvergentné rady
+---------------------------------------
+
+$a_n$ vs. $|a_n|$
+: Ak konverguje $\sum_{n=1}^\infty |a_n|$, tak konverguje aj $\sum_{n=1}^\infty a_n$.
+
+absolútna, relatívna konvergencia
+: Konvergentný rad sa nazýva absolútne (resp. relatívne) konvergentný, ak rad $\sum_{n=1}^\infty |a_n|$ konverguje (resp. diverguje)
+{:.def}
+
+Na vyšetrenie konvergencie radu $\sum_{n=1}^\infty |a_n|$ možno zjavne použiť kritériá z predchádzajúcej sekcie.
+
+rad so striedavými znamienkami
+: je rad $\sum_{n=1}^\infty (-1)^n a_n$, kde $a_n > 0$ (resp. $a_n < 0$) počínajúc niektorým $n_0$
+
+Leibnizovo kritérium
+: Nech ${a_n}_{n=1}^\infty$ je monotónna postupnosť a $\lim_{n\to\infty} a_n = 0$. Potom rad $\sum_{n=1}^\infty (-1)^{n+1} a_n$ (zrejme rad so striedavými znamienkami) konverguje a pre súčet $R_n$ jeho $n$-tého zvyšku platí odhad $|R_n| \leq a_{n+1},\; n \in \N$.
