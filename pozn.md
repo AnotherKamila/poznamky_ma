@@ -121,7 +121,7 @@ Prvé L'H pravidlo ($0/0$)
     Ak $a = +\infty$: subst $x = 1/t$, overím hentie podmienky, použijem L'H
 
 Druhé L'H pravidlo ($\infty/\infty$)
-: Nech $a \in \Rx$ je hrom. bod intervalu $I$, nech f,g\c I \setminus {a} \to \R$ sú diferencovateľné fcie, pričom
+: Nech $a \in \Rx$ je hrom. bod intervalu $I$, nech $f,g\c I \setminus {a} \to \R$ sú diferencovateľné fcie, pričom
     1. $\lim_{x\to a} |g(x)| = \infty$
     2. $f'^2(x) + g'^2(x) > 0, x \in I \setminus {a}$
     3. existuje vlastná alebo nevl. $\lim_{x\to a} \frac{f'(x)}{g'(x)} = L \in \Rx$
@@ -140,6 +140,20 @@ archeologická
     !D
     $\TODO$
 
+Taylorov polynóm
+: Nech $f$ je $n$-krát diferencovateľná na intervale $I$ a $n$-krát diferencovateľná v bode $a \in I$. Polynóm
+  $$ T_n(x) = f(a) + f'(a) (x-a) + \frac{f''(a)}{2!}(x-a)^2 + \ldots + \frac{f^{(n)}(a)}{n!}(x-a)^n $$
+  sa nazýva Taylorov polynóm rádu $n$ fcie $f$ v bode $a$. Ak $a = 0$, hovoríme Maclaurinov.
+
+lokálne najlepšia aproximácia
+: Nech $f\c I \to \R$ je $(n-1)$-krát diferencovateľná na $I$ a $n$-krát diferencovateľná v bode $a$. Potom
+
+    1. polynóm stupňa nanajvýš $n$ je Taylorovým polynómom rádu $n$ fcie $f$ práve vtedy, keď
+       $$ \lim_{n\to a} \frac{f(x) - P(x)}{(x-a)^n} = 0 $$
+    2. pre $\forall$ polynóm $P$ stupňa nanajvýš $n$ odlišný od $T_n$ fcie $f$ v bode $a$ existuje $\P(a)$ s vlastnosťou
+       $$ \forall x \in \P(a) \cap I\c |f(x) - T_n(x)| < |f(x) - P(x)| $$
+
+    Po ľudsky: Taylor je taký polynóm st. nanajvýš $n$, ktorý $f$ lokálne aproximuje najlepšie ako sa len dá.
 
 Neurčitý integrál
 =================
